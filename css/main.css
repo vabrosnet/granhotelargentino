@@ -62,13 +62,9 @@ p{
     overflow: hidden;   
 }
 
-#hero, #servicios, #habitaciones, #contacto{
+.seccion{
     height: 100vh;
     background-color: var(--black);
-    /* opacity: 0.9; */
-    /* background-color: var(--dark-gray); */
-    /* background: rgb(187,151,93); */
-    /* background: linear-gradient(0deg, rgba(187,151,93,1) 0%, rgba(187,151,93,1) 0%); */
 }
 
 .mobile-menu, .desktop-menu{
@@ -176,7 +172,7 @@ p{
     font-size: 2rem;
 }
 
-    /* seccion1 */
+    /* seccion principal */
 .hero{
     display: flex;
     flex-grow: 1;
@@ -216,74 +212,6 @@ p{
     font-weight: bold;
     font-size: 0.9rem;
     color: var(--white);
-}
-
-
-footer{
-    background-color: #2F2F2F;
-}
-
-    /* desktop */
-@media screen and (min-width: 800px) {
-
-    .open-menu{
-        display: none;
-    }
-
-    .desktop-menu{
-        display: flex;
-        padding: 0 2rem;
-        align-items: end;
-        justify-content: center;
-    }
-
-    .desktop-menu ul{
-        list-style-type: none;
-        display: flex;
-        gap: 3rem;
-        font-family: var(--text);
-    }
-
-    .desktop-menu ul li a{
-        color: var(--black);
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 0.8rem;
-        letter-spacing: .15rem;
-        position: relative;
-    }
-
-    .desktop-menu ul li a::after{
-        content: '';
-        width: 0;
-        height: 2px;
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--dark-gray);
-        transition: width 0.3s;
-    }
-    
-    .desktop-menu ul li a:hover::after{
-        width: 80%; 
-    }
-
-    .header{
-        justify-content: space-around;
-    } 
-
-    .hero__content h1{
-        font-size: 5em;
-    }
-
-    .hero__content h2{
-        font-size: 1.2rem;
-    }
-}
-
-.disabled{
-    display: none;
 }
 
 /*slider*/
@@ -333,6 +261,78 @@ footer{
 }
 
 /*fin slider*/
+
+
+
+
+
+footer{
+    background-color: #2F2F2F;
+}
+
+    /* desktop */
+@media screen and (min-width: 800px) {
+
+    .open-menu{
+        display: none;
+    }
+
+    .desktop-menu{
+        display: flex;
+        padding: 0 2rem;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .desktop-menu ul{
+        list-style-type: none;
+        display: flex;
+        gap: 3rem;
+        font-family: var(--text);
+    }
+
+    .desktop-menu ul li a{
+        color: var(--black);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8rem;
+        letter-spacing: .15rem;
+        position: relative;
+    }
+
+    .desktop-menu ul li a::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--black);
+        transition: width 0.3s;
+    }
+    
+    .desktop-menu ul li a:hover::after{
+        width: 80%; 
+    }
+
+    .header{
+        justify-content: space-around;
+    } 
+
+    .hero__content h1{
+        font-size: 5em;
+    }
+
+    .hero__content h2{
+        font-size: 1.2rem;
+    }
+}
+
+.disabled{
+    display: none;
+}
+
 
 /*logo whatsapp*/
 .btn-wsp{
