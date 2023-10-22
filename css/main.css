@@ -64,7 +64,8 @@ p{
 
 .seccion{
     height: 100vh;
-    background-color: var(--black);
+    /* background-color: var(--black); */
+    background: linear-gradient(70deg, #000, #343434);
 }
 
 .mobile-menu, .desktop-menu{
@@ -270,69 +271,9 @@ footer{
     background-color: #2F2F2F;
 }
 
-    /* desktop */
-@media screen and (min-width: 800px) {
-
-    .open-menu{
-        display: none;
-    }
-
-    .desktop-menu{
-        display: flex;
-        padding: 0 2rem;
-        align-items: end;
-        justify-content: center;
-    }
-
-    .desktop-menu ul{
-        list-style-type: none;
-        display: flex;
-        gap: 3rem;
-        font-family: var(--text);
-    }
-
-    .desktop-menu ul li a{
-        color: var(--black);
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 0.8rem;
-        letter-spacing: .15rem;
-        position: relative;
-    }
-
-    .desktop-menu ul li a::after{
-        content: '';
-        width: 0;
-        height: 2px;
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--black);
-        transition: width 0.3s;
-    }
-    
-    .desktop-menu ul li a:hover::after{
-        width: 80%; 
-    }
-
-    .header{
-        justify-content: space-around;
-    } 
-
-    .hero__content h1{
-        font-size: 5em;
-    }
-
-    .hero__content h2{
-        font-size: 1.2rem;
-    }
-}
-
 .disabled{
     display: none;
 }
-
 
 /*logo whatsapp*/
 .btn-wsp{
@@ -362,3 +303,130 @@ footer{
 }
 
 /*fin whatsapp*/
+
+
+
+/*cards*/
+
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--black);
+    background: linear-gradient(70deg, #000, #343434);
+    padding: 0rem 1rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 460vw;  
+}
+
+.comentarios{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 20vh;
+    width: auto;
+    margin-bottom: 2rem;
+}
+  
+.card{
+    width: 350px;
+    margin: 1rem;
+    transition: all 300ms;
+}
+
+.card .cover{
+    width: 100%;
+    height: 50px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 2px 0px 0px;
+    text-align: center;
+    padding-top: 1rem;    
+}
+
+.card h3{
+    font-size: 1rem;  
+}
+
+.card .description{
+    background: white;
+    padding: 1rem;
+    border-radius: 0px 0px 20px 2px;
+    transition: all 300ms;
+}
+
+
+    /* desktop */
+    @media screen and (min-width: 800px) {
+
+        .open-menu{
+            display: none;
+        }
+    
+        .desktop-menu{
+            display: flex;
+            padding: 0 2rem;
+            align-items: end;
+            justify-content: center;
+        }
+    
+        .desktop-menu ul{
+            list-style-type: none;
+            display: flex;
+            gap: 3rem;
+            font-family: var(--text);
+        }
+    
+        .desktop-menu ul li a{
+            color: var(--black);
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.8rem;
+            letter-spacing: .15rem;
+            position: relative;
+        }
+    
+        .desktop-menu ul li a::after{
+            content: '';
+            width: 0;
+            height: 2px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--black);
+            transition: width 0.3s;
+        }
+        
+        .desktop-menu ul li a:hover::after{
+            width: 80%; 
+        }
+    
+        .header{
+            justify-content: space-around;
+        } 
+    
+        .hero__content h1{
+            font-size: 5em;
+        }
+    
+        .hero__content h2{
+            font-size: 1.2rem;
+        }
+    
+        .container__wrapper {
+            width: 200vw;  
+        }
+
+        .card{
+            width: 500px;
+        }
+    }
+    
