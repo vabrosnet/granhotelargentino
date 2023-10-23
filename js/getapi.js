@@ -14,18 +14,16 @@ function getData() {
             comentario.forEach(function (lists) {
                 cards += `
 
-                    <article class="comentario">
-                        <div class="card">
-                            <div class="cover">
-                                <h3>${lists.user.username}</h3>
-                            </div>
-                            <div class="description ">
-                                <p>${lists.body}.</p>
-                            </div>
+                    <article class="comentarios__card">
+                        <div class="titulo">
+                            <h3><i class="bi bi-person-fill"></i> ${lists.user.username}</h3>
+                        </div>
+                        <div class="description">
+                            <p><i class="bi bi-chat-square-text-fill"></i> ${lists.body}.</p>
                         </div>
                     </article> `
             })
-            document.getElementById('cards').innerHTML = cards
+            document.getElementById('wrapper').innerHTML = cards
         })
 }
 

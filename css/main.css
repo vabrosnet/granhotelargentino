@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;400;500&display=swap');
 
+/* variables */
 :root {
     /* Colores */
     --black: hsl(0, 0%, 0%);
@@ -13,16 +14,18 @@
     --text: 'Alata', sans-serif;
     --titles: 'Josefin Sans', sans-serif;
 }
+/* fin variables */
 
-    /* reset */
+/* reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
+/* fin reset */
 
-    /* generales */
+/* generales */
 html,body{
     height: 100%;
     width: 100%;
@@ -40,7 +43,7 @@ h1, h2, h3{
     color: var(--golden);
 }
 
-p{
+p, li{
     font-family:var(--text);
 }
 
@@ -62,17 +65,13 @@ p{
     overflow: hidden;   
 }
 
-.seccion{
-    height: 100vh;
-    /* background-color: var(--black); */
-    background: linear-gradient(70deg, #000, #343434);
-}
-
 .mobile-menu, .desktop-menu{
     display: none;
 }
 
-    /* encabezado */
+/* fin generales */
+
+/* encabezado */
 .header{
     position: fixed;
     display: flex;
@@ -105,76 +104,84 @@ p{
 }
 
     /* menu mobile */
-.open-menu, .close-menu{
-    right: 5%;
-    border: 0;
-    background-color: transparent;
-    color: var(--black);
-    font-size: 3rem;
-    cursor: pointer;
-    /* padding-right: 1rem; */
-}
+    .open-menu, .close-menu{
+        right: 5%;
+        border: 0;
+        background-color: transparent;
+        color: var(--black);
+        font-size: 3rem;
+        cursor: pointer;
+    }
 
-.mobile-menu{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--golden);
-    position: fixed;
-    inset: 0;
-    padding: .4rem 1rem;
-    z-index: 99;
-    transition: all 1s ease;
-    overflow: hidden;
-}
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--golden);
+        position: fixed;
+        inset: 0;
+        padding: .4rem 1rem;
+        z-index: 99;
+        transition: all 1s ease;
+        overflow: hidden;
+    }
 
-.mobile-menu__header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .mobile-menu__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.mobile-menu__logo{
-    display: flex;
-    align-items: center;
-    transition: all .5s ease; 
-    
-}
+    .mobile-menu__logo{
+        display: flex;
+        align-items: center;
+        transition: all .5s ease; 
+        
+    }
 
-.mobile-menu__header h2{
-    color: var(--black);
-    font-size: 0.8rem;
-    padding-top: .25rem;
-    padding-left: .5rem;
-}
+    .mobile-menu__header h2{
+        color: var(--black);
+        font-size: 0.8rem;
+        padding-top: .25rem;
+        padding-left: .5rem;
+    }
 
-.mobile-menu__header .mobile-logo{
-    width: 3rem;
-    padding: .5rem;
-    background-color: var(--black);
-}
+    .mobile-menu__header .mobile-logo{
+        width: 3rem;
+        padding: .5rem;
+        background-color: var(--black);
+    }
 
-.mobile-menu__nav{
-    flex-grow: 1;
-    display: flex;
-    align-items: center; 
-}
+    .mobile-menu__nav{
+        flex-grow: 1;
+        display: flex;
+        align-items: center; 
+    }
 
-.mobile-menu__nav ul{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 2rem;
-}
+    .mobile-menu__nav ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 2rem;
+    }
 
-.mobile-menu__nav ul li a{
-    font-family:var(--titles);
-    text-transform: uppercase;
-    color: var(--black);
-    font-size: 2rem;
-}
+    .mobile-menu__nav ul li a{
+        font-family:var(--titles);
+        text-transform: uppercase;
+        color: var(--black);
+        font-size: 2rem;
+    }
 
-    /* seccion principal */
+    .disabled{
+        display: none;
+    }
+    /* fin menu mobile */
+
+/* fin encabezado */
+
+/* principal */
 .hero{
+    height: 100vh;
+    background: linear-gradient(70deg, #000, #343434);
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -194,7 +201,6 @@ p{
     font-weight: bold;
     font-size: 1.5rem;
     color: transparent;
-    /* -webkit-text-stroke: 0.01px var(--golden); */
     background-image: linear-gradient(to left, #BB975D, rgb(187, 151, 93), black, rgb(35, 31, 31));
     background-size: 100%;
     background-clip: text;
@@ -215,65 +221,190 @@ p{
     color: var(--white);
 }
 
-/*slider*/
-.slide{
+    /*slider*/
+    .hero__slide{
+        position: relative;
+        height: 100%;
+        opacity: 0.8;
+    }
+
+    .hero__slider{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/slider1.jpg");
+        background-size: cover;
+        background-position:center center;
+        /* background-attachment: fixed; */
+        width: 100%;
+        height: 100%;
+        border-radius: 0.1rem;
+        animation: slider 15s infinite;
+        z-index: -1;
+    }
+
+    @keyframes slider {
+
+        /* 25% {
+            background-image: url("../img/slider4.jpg"); 
+            background-size: cover;
+        } */
+
+        33.33% {
+            background-image: url("../img/slider3.jpg"); 
+            background-size: cover;
+        }
+
+        66.66% {
+            background-image: url("../img/slider2.jpg"); 
+            background-size: cover;
+        }
+
+        100% {
+            background-image: url("../img/slider1.jpg"); 
+            background-size: cover;
+        }
+    }
+
+    /*fin slider*/
+
+/* fin principal */
+
+
+/*servicios*/
+.servicios{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;    
+}
+
+.servicios__content{
+    padding: 1rem 0;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    gap: 2rem;
+    
+}
+.servicios__card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.servicios__card .iconos{
     position: relative;
-    height: 100%;
-    opacity: 0.8;
+    background-color: var(--black);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.slider{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url("../img/slider1.jpg");
-    background-size: cover;
-    background-position:center center;
-    /* background-attachment: fixed; */
+.servicios__card .lista{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+    text-align: center;
+}
+
+.servicios__card .lista ul li{
+    margin-top: 1rem;
+    list-style-type:none; 
+}
+
+
+/*fin servicios*/
+
+
+/*habitaciones*/
+
+/*fin habitaciones*/
+
+
+/*comentarios*/
+
+.comentarios {
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--black);
+    background: linear-gradient(70deg, #000, #343434);
+    padding: 0rem 1rem;
+    width: 98.9vw;
+    height: 100vh;
+}
+
+.comentarios__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 460vw;  
+}
+
+.comentarios__titulo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 20vh;
+    width: auto;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+  
+.comentarios__card{
+    width: 19rem;
+    /* margin: 1rem; */
+    transition: all 300ms;
+}
+
+.comentarios__card .titulo{
     width: 100%;
-    height: 100%;
-    border-radius: 0.1rem;
-    animation: slider 15s infinite;
-    z-index: -1;
+    height: 50px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 2px 0px 0px;
+    text-align: center;
+    padding-top: 1rem;    
 }
 
-@keyframes slider {
-
-    /* 25% {
-        background-image: url("../img/slider4.jpg"); 
-        background-size: cover;
-    } */
-
-    33.33% {
-        background-image: url("../img/slider3.jpg"); 
-        background-size: cover;
-    }
-
-    66.66% {
-        background-image: url("../img/slider2.jpg"); 
-        background-size: cover;
-    }
-
-    100% {
-        background-image: url("../img/slider1.jpg"); 
-        background-size: cover;
-    }
+.comentarios__card i{
+    font-size: 1.5rem;  
 }
 
-/*fin slider*/
+.comentarios__card h3{
+    font-size: 1rem;  
+}
+
+.comentarios__card .description{
+    background: white;
+    height: 7rem;
+    padding: 1rem 0;
+    border-radius: 0px 0px 20px 2px;
+    transition: all 300ms;
+    text-align: center;
+}
+/*fin comentarios*/
+
+/*contacto*/
 
 
+/*fin contacto*/
 
-
-
+/*pie*/
 footer{
     background-color: #2F2F2F;
 }
-
-.disabled{
-    display: none;
-}
+/*fin pie*/
 
 /*logo whatsapp*/
 .btn-wsp{
@@ -306,65 +437,7 @@ footer{
 
 
 
-/*cards*/
-
-.wrapper {
-    overflow-x: hidden;
-    position: relative;
-    background-color: var(--black);
-    background: linear-gradient(70deg, #000, #343434);
-    padding: 0rem 1rem;
-    width: 98.9vw;
-    height: 100vh;
-}
-
-.container__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 460vw;  
-}
-
-.comentarios{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 20vh;
-    width: auto;
-    margin-bottom: 2rem;
-    overflow: hidden;
-}
-  
-.card{
-    width: 350px;
-    margin: 1rem;
-    transition: all 300ms;
-}
-
-.card .cover{
-    width: 100%;
-    height: 50px;
-    background: white;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px 2px 0px 0px;
-    text-align: center;
-    padding-top: 1rem;    
-}
-
-.card h3{
-    font-size: 1rem;  
-}
-
-.card .description{
-    background: white;
-    padding: 1rem;
-    border-radius: 0px 0px 20px 2px;
-    transition: all 300ms;
-}
-
-
-    /* desktop */
+/* desktop */
     @media screen and (min-width: 800px) {
 
         .open-menu{
@@ -421,13 +494,18 @@ footer{
         .hero__content h2{
             font-size: 1.2rem;
         }
+
+        .servicios__card .iconos{
+            height: 5rem;
+            width: 5rem;
+        }
     
-        .container__wrapper {
+        .comentarios__content {
             width: 200vw;  
         }
 
-        .card{
+        .comentarios__card{
             width: 500px;
         }
     }
-    
+/* fin desktop */

@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const articles = document.querySelector(".container__wrapper");
+const articles = document.querySelector(".comentarios__content");
 
 function getScrollAmount() {
   let articlesWidth = articles.scrollWidth;
@@ -14,10 +14,9 @@ const tween = gsap.to(articles, {
 });
 
 ScrollTrigger.create({
-  trigger:".wrapper",
+  trigger:".comentarios",
   start:"top 0%",
   end: () => `+=${getScrollAmount() * -1}`,
-  // end:"+=" + amountToScroll,
   pin:true,
   animation:tween,
   scrub:1,
