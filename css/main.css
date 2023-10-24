@@ -283,7 +283,7 @@ p, li{
     padding: 1rem 0;
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
     gap: 2rem;
     
 }
@@ -297,7 +297,7 @@ p, li{
     transition: all 0.5s;
 }
 
-.servicios__card .iconos{
+.servicios__card .icono{
     position: relative;
     background-color: var(--black);
     height: 5rem;
@@ -321,8 +321,6 @@ p, li{
     margin-top: 1rem;
     list-style-type:none; 
 }
-
-
 /*fin servicios*/
 
 
@@ -332,7 +330,6 @@ p, li{
 
 
 /*comentarios*/
-
 .comentarios {
     overflow-x: hidden;
     position: relative;
@@ -347,21 +344,21 @@ p, li{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 460vw;  
+    width: 500vw;  
 }
 
 .comentarios__titulo{
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 20vh;
+    height: 19vh;
     width: auto;
     margin-bottom: 2rem;
     overflow: hidden;
 }
   
 .comentarios__card{
-    width: 19rem;
+    width: 18rem;
     /* margin: 1rem; */
     transition: all 300ms;
 }
@@ -397,7 +394,84 @@ p, li{
 
 /*contacto*/
 
+.contacto{
+    background: var(--black);
+    color: var(--dark-gray);
+    line-height: 1.6;
+    padding: 0 1.8rem;
+}
 
+.contacto__titulo{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.contacto__content {
+    box-shadow: 0 0 40px 0 rgba(255, 255, 255, .3);
+}
+
+.contacto__content > * {
+    padding: 2rem;
+}
+
+.contacto__form {
+    background: var(--white);
+}
+
+.contacto__form form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contacto__form form label {
+    display: block;
+}
+
+.contacto__form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contacto__form form .block {
+    grid-column: 1 / 1;
+}
+
+.contacto__form form .btn,
+.contacto__form form input,
+.contacto__form form textarea {
+    width: 100%;
+    padding: .7rem;
+    border: none;
+    background: none;
+    outline: 0;
+    color: var(--black );
+    border-bottom: 1px solid var(--golden);
+}
+
+.contacto__form form .btn {
+    background: var(--golden);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contacto__form form .btn:hover,
+.contacto__form form .btn:focus {
+    background: var(--black);
+    color: var(--golden);
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.contacto__info {
+    background: #000;
+}
+
+.contacto__info h4, .contacto__info ul, .contacto__info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
 /*fin contacto*/
 
 /*pie*/
@@ -439,6 +513,10 @@ footer{
 
 /* desktop */
     @media screen and (min-width: 800px) {
+        /*inicio encabezado*/
+        .header{
+            justify-content: space-around;
+        } 
 
         .open-menu{
             display: none;
@@ -482,11 +560,9 @@ footer{
         .desktop-menu ul li a:hover::after{
             width: 80%; 
         }
-    
-        .header{
-            justify-content: space-around;
-        } 
-    
+        /*fin encabezado*/
+
+        /*inicio principal*/
         .hero__content h1{
             font-size: 5em;
         }
@@ -494,12 +570,16 @@ footer{
         .hero__content h2{
             font-size: 1.2rem;
         }
+        /*fin principal*/
 
-        .servicios__card .iconos{
+        /*inicio servicios*/
+        .servicios__card .icono{
             height: 5rem;
             width: 5rem;
         }
+        /*fin servicios*/
     
+        /*inicio comentarios*/
         .comentarios__content {
             width: 200vw;  
         }
@@ -507,5 +587,30 @@ footer{
         .comentarios__card{
             width: 500px;
         }
+        /*fin comentarios*/
+
+        /*inicio contacto*/
+        .contacto__content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+        .contacto__content > * {
+            padding: 2em;
+        }
+        .contacto__info h4,
+        .contacto__info ul,
+        .contacto__info p {
+            text-align: left;
+        }
+
+        .contacto__form form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .contacto__form form .block {
+            grid-column: 1 / 3;
+        }
+        /*fin contacto*/
     }
 /* fin desktop */

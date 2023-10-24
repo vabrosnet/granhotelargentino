@@ -4,14 +4,14 @@ function getData() {
         .then(response => response.json())
         .then(data => {
 
-            console.log(data);
+            // console.log(data);
 
             let comentario = data.comments;
-            console.log(comentario)
+            // console.log(comentario)
 
             let cards = ""
            
-            comentario.forEach(function (lists) {
+            comentario.forEach((lists) => {
                 cards += `
 
                     <article class="comentarios__card">
@@ -23,7 +23,7 @@ function getData() {
                         </div>
                     </article> `
             })
-            document.getElementById('wrapper').innerHTML = cards
+            document.getElementById('cards').innerHTML = cards
         })
 }
 
