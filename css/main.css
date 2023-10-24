@@ -14,66 +14,73 @@
     --titles: 'Josefin Sans', sans-serif;
 }
 
-    /* reset */
-*{
+/* reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-    /* generales */
-html,body{
+/* generales */
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-h1, h2, h3{
-    font-family:var(--titles);
+h1,
+h2,
+h3 {
+    font-family: var(--titles);
     text-transform: uppercase;
     color: var(--golden);
 }
 
-p{
-    font-family:var(--text);
+p {
+    font-family: var(--text);
 }
 
-.left-text{
+.left-text {
     text-align: left;
 }
 
-.right-text{
+.right-text {
     text-align: right;
 }
 
-.center-text{
+.center-text {
     text-align: center;
 }
 
 
-#main{
+#main {
     position: relative;
-    overflow: hidden;   
+    overflow: hidden;
 }
 
-#hero, #servicios, #habitaciones, #contacto{
+#hero,
+#servicios,
+#Habitaciones,
+#contacto {
     height: 100vh;
     background-color: var(--dark-gray);
-    background: rgb(187,151,93);
-    background: linear-gradient(0deg, rgba(187,151,93,1) 0%, rgba(187,151,93,1) 0%);
+    background: rgb(187, 151, 93);
+    background: linear-gradient(0deg, rgba(187, 151, 93, 1) 0%, rgba(187, 151, 93, 1) 0%);
 }
 
-.mobile-menu, .desktop-menu{
+.mobile-menu,
+.desktop-menu {
     display: none;
 }
 
-.header{
+.header {
     position: fixed;
     display: flex;
     height: 1rem;
@@ -87,24 +94,25 @@ p{
     z-index: 99;
 }
 
-.header__logo{
+.header__logo {
     display: flex;
     align-items: center;
 }
 
-.header__logo h2{
+.header__logo h2 {
     color: var(--black);
     font-size: 0.8rem;
     padding-left: .5rem;
 }
 
-.header__logo .logo{
+.header__logo .logo {
     width: 3rem;
     padding: .5rem;
     background-color: var(--black);
 }
 
-.open-menu, .close-menu{
+.open-menu,
+.close-menu {
     right: 5%;
     border: 0;
     background-color: transparent;
@@ -114,11 +122,11 @@ p{
     padding-right: 1rem;
 }
 
-.open-menu{
+.open-menu {
     color: var(--black);
 }
 
-.mobile-menu{
+.mobile-menu {
     display: flex;
     flex-direction: column;
     background-color: var(--black);
@@ -131,59 +139,59 @@ p{
     overflow: hidden;
 }
 
-.mobile-menu__header{
+.mobile-menu__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.mobile-menu__logo{
+.mobile-menu__logo {
     display: flex;
     align-items: center;
-    transition: all .5s ease;  
+    transition: all .5s ease;
 }
 
-.mobile-menu__header h2{
+.mobile-menu__header h2 {
     color: var(--golden);
     font-size: 0.8rem;
     padding-top: 0.5rem;
 }
 
-.mobile-menu__header .mobile-logo{
+.mobile-menu__header .mobile-logo {
     width: 3rem;
     padding: 0.5rem;
     filter: saturate(2);
 }
 
-.mobile-menu__nav{
+.mobile-menu__nav {
     flex-grow: 1;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
-.mobile-menu__nav ul{
+.mobile-menu__nav ul {
     display: flex;
     flex-direction: column;
     list-style: none;
     gap: 2rem;
 }
 
-.mobile-menu__nav ul li a{
-    font-family:var(--titles);
+.mobile-menu__nav ul li a {
+    font-family: var(--titles);
     text-transform: uppercase;
     color: var(--golden);
     font-size: 2rem;
 }
 
-    /* seccion1 */
-.hero{
+/* seccion1 */
+.hero {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     position: relative;
 }
 
-.hero__content{
+.hero__content {
     align-items: center;
     height: 100%;
     width: 100%;
@@ -192,7 +200,7 @@ p{
     padding: 0 1rem;
 }
 
-.hero__content h1{
+.hero__content h1 {
     font-weight: bold;
     font-size: 1.5rem;
     color: transparent;
@@ -207,38 +215,38 @@ p{
 
 @keyframes move {
     100% {
-        background-position: 2000px 0; 
+        background-position: 2000px 0;
     }
 }
 
-.hero__content h2{
+.hero__content h2 {
     font-weight: bold;
     font-size: 0.9rem;
     color: var(--white);
 }
 
-    /* desktop */
+/* desktop */
 @media screen and (min-width: 800px) {
 
-    .open-menu{
+    .open-menu {
         display: none;
     }
 
-    .desktop-menu{
+    .desktop-menu {
         display: flex;
         padding: 0 2rem;
         align-items: end;
         justify-content: center;
     }
 
-    .desktop-menu ul{
+    .desktop-menu ul {
         list-style-type: none;
         display: flex;
         gap: 3rem;
         font-family: var(--text);
     }
 
-    .desktop-menu ul li a{
+    .desktop-menu ul li a {
         color: var(--black);
         text-transform: uppercase;
         font-weight: bold;
@@ -247,7 +255,7 @@ p{
         position: relative;
     }
 
-    .desktop-menu ul li a::after{
+    .desktop-menu ul li a::after {
         content: '';
         width: 0;
         height: 2px;
@@ -258,43 +266,43 @@ p{
         background: var(--dark-gray);
         transition: width 0.3s;
     }
-    
-    .desktop-menu ul li a:hover::after{
-        width: 80%; 
+
+    .desktop-menu ul li a:hover::after {
+        width: 80%;
     }
 
-    .header{
+    .header {
         justify-content: space-around;
-    } 
+    }
 
-    .hero__content h1{
+    .hero__content h1 {
         font-size: 5em;
     }
 
-    .hero__content h2{
+    .hero__content h2 {
         font-size: 1.2rem;
     }
 }
 
-.disabled{
+.disabled {
     display: none;
 }
 
 /*slider*/
-.slide{
+.slide {
     position: relative;
     height: 50rem;
     opacity: 0.9;
 }
 
-.slider{
+.slider {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-image: url("../img/slider1.jpg");
     background-size: cover;
-    background-position:center center;
+    background-position: center center;
     background-attachment: fixed;
     width: 100%;
     height: 100%;
@@ -306,22 +314,22 @@ p{
 @keyframes slider {
 
     25% {
-        background-image: url("../img/slider4.jpg"); 
+        background-image: url("../img/slider4.jpg");
         background-size: cover;
     }
 
     50% {
-        background-image: url("../img/slider3.jpg"); 
+        background-image: url("../img/slider3.jpg");
         background-size: cover;
     }
 
     75% {
-        background-image: url("../img/slider2.jpg"); 
+        background-image: url("../img/slider2.jpg");
         background-size: cover;
     }
 
     100% {
-        background-image: url("../img/slider1.jpg"); 
+        background-image: url("../img/slider1.jpg");
         background-size: cover;
     }
 }
@@ -329,7 +337,7 @@ p{
 /*fin slider*/
 
 /*logo whatsapp*/
-.btn-wsp{
+.btn-wsp {
     position: fixed;
     width: 3.5rem;
     height: 3.5rem;
@@ -345,14 +353,220 @@ p{
     z-index: 1000;
 }
 
-.btn-wsp:hover{
+.btn-wsp:hover {
     background-color: var(--white);
     color: var(--whatsapp);
 }
 
-.btn-wsp svg:hover{
+.btn-wsp svg:hover {
     stroke: var(--whatsapp);
-    
+
 }
 
 /*fin whatsapp*/
+/* Nosotros */
+
+#Nosotros {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*justify-content: space-between;*/
+    align-items: center;
+
+
+}
+
+#Nosotros img {
+    width: 50%;
+    margin-top: 4%;
+    height: 650px;
+    border-radius: 03%;
+    box-shadow: 20px 10px 10px rgb(27, 27, 25, 7.5);
+
+
+}
+
+
+#Nosotros h2 {
+    position: relative;
+    font-size: 370%;
+    margin-top: 70px;
+    text-align: center;
+    align-self: flex-start;
+    color: rgb(47, 50, 9);
+
+}
+
+
+#Nosotros p {
+    width: 80%;
+    text-align: center;
+    margin: 10%;
+    padding: 10px;
+    align-self: flex-start;
+    font-size: 150%;
+    box-shadow: 20px 10px 10px rgb(27, 27, 25, 7.5);
+
+}
+
+
+
+/* ---------HABITACIONES--------------- */
+
+#Habitaciones {
+
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 45% 50%;
+    column-gap: 1rem;
+    margin-top: 8%;
+
+}
+
+.Deluxe {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1.8em;
+    height: auto;
+    width: auto;
+
+
+}
+
+.Deluxe img {
+
+    border-radius: 25%;
+    border: solid black;
+
+}
+
+.Deluxe img:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: 1.5s;
+
+}
+
+
+/* ---------ICONOS--------------- */
+.Iconos {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    margin-left: 10%;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    height: 80%;
+    gap: 3rem;
+
+}
+
+.Iconos img {
+    width: 35%;
+    height: 20%;
+    margin: 20%;
+
+}
+
+.Iconos p {
+    font-size: 75%;
+}
+
+.Box-Icon {
+    border: solid black;
+    text-align: center;
+    place-items: center;
+
+
+
+}
+
+.Box-Icon:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.30s;
+    background-color: #dad5a576;
+}
+
+
+
+
+/* Restaurante */
+
+.Restaurante {
+    background-image: url(../img/Hotel/Emperador-Hotel-Buenos-Aires-Exterior.jpg);
+    height: 25%;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    border: solid black;
+}
+
+.Restaurante h2 {
+    font-size: 450%;
+    text-align: center;
+    margin: 10%;
+    color: rgb(255, 255, 255);
+}
+
+.Restaurante h5 {
+    color: aliceblue;
+    font-size: 300%;
+    text-align: center;
+}
+
+/* ----------------------MEDIA QUERIES---------------------*/
+
+
+@media screen and (max-width: 768px) {
+    #Nosotros {
+        flex-wrap: wrap;
+    }
+
+    #Nosotros img {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    #Nosotros h2 {
+        font-size: 270%;
+        margin-top: 40px;
+
+    }
+
+    #Nosotros p {
+        width: 80%;
+        text-align: justify;
+        margin: 5%;
+        font-size: 100%;
+    }
+
+
+    .Restaurante h2 {
+        font-size: 350%;
+       
+    }
+    
+    .Restaurante h5 {
+               font-size: 250%;
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
