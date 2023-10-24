@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"href='css/normalize.css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--Iconos de bootstrap -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
 </head>
@@ -62,13 +62,12 @@
                 <h1>Gran Hotel Argentino</h1>   
                 <h2>Le damos las más cálida bienvenida.</h2>
             </div>
-
         </section>
 
         <section id="servicios" class="servicios">
             <div class="servicios__content">
                 <article class="servicios__card">
-                    <div class="iconos">
+                    <div class="icono">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-skyscraper" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#bb975d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M3 21l18 0"></path>
@@ -94,7 +93,7 @@
                 </article>
 
                 <article class="servicios__card">
-                    <div class="iconos">
+                    <div class="icono">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school-bell" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#bb975d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M4 17a3 3 0 0 0 3 3"></path>
@@ -103,7 +102,7 @@
                         </svg>
                     </div>
                     <div class="lista">
-                        <h3>Servicios en la Habitación</h3>
+                        <h3>Servicios en Habitación</h3>
                         <ul>
                             <li>- TV por Cable.</li>
                             <li>- Frigo Bar.</li>
@@ -116,7 +115,7 @@
                 </article>
 
                 <article class="servicios__card">
-                    <div class="iconos">
+                    <div class="icono">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#bb975d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3"></path>
@@ -143,15 +142,50 @@
 
         <section id="comentarios" class="comentarios">
             <div class="comentarios__titulo">
-              <h3>Comentarios</h3>
+                <h3>Comentarios</h3>
             </div>
-            <div id="wrapper" class="comentarios__content">
-
+            <div id="cards" class="comentarios__content">
+                <!-- cards desde js/getapi.js -->
             </div>
-          </section>
+        </section>
 
         <section class="contacto" id="contacto">
-            <h3>Contacto</h3>
+            <h3 class="contacto__titulo">Contacto</h3>
+            <div class="contacto__content">
+                <div class="contacto__form">
+                    <form action="registro.php" method="post" onsubmit="return validarFormulario();">
+                        <p class="block">
+                            <label for="nombre">Apellido y Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </p>
+                        <p>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </p>
+                        <p>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </p>
+                        <p class="block">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                        </p>
+                        <p class="block">
+                            <input class="btn" type="submit" value="Enviar">
+                        </p>
+                    </form>
+                </div>
+
+                <div class="contacto__info">
+                    <h3 class="contacto__titulo">Información</h3>
+                    <ul>
+                        <li><i class="bi bi-geo-alt-fill"></i> Costanera 1234, Villa la Angostura.</li>
+                        <li><i class="bi bi-envelope-fill"></i> info@granhotelargentino.com</li>
+                        <li><i class="bi bi-telephone-fill"></i> (0294) 4999-9999</li>
+                        <li><i class="bi bi-whatsapp"></i> (294) 4999-9998 (solo mensajes).</li>
+                    </ul>                    
+                </div>
+            </div>
         </section>
 
     </main>
@@ -174,5 +208,6 @@
     <script src="js/main.js"></script>
     <script src="js/getapi.js"></script>
     <script src="js/gsap.js"></script>
+    <script type="module" src=""></script>
 </body>
 </html>
