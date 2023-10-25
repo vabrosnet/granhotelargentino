@@ -505,57 +505,54 @@ p, li{
 /*fin contacto*/
 
 /*pie*/
-.footer{
-    background-color: var(--black);
-    background: linear-gradient(70deg, #000, #343434);
-    /* padding: 2rem 1rem;  */
-    line-height: 1.6;
-    
+.pie-pagina{
+    width: 100%;
+    background-color: #2F2F2F;
+    padding: 35px 35px 0px opx;
+    padding-left: 50px;
 }
-
-.footer__content{
-    /* height: 50%; */
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width:1200px;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr;
-    padding: 2rem;
-    justify-content: baseline;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0px 10px;
+
+}
+.pie-pagina .grupo-1 .box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: grid;
+    grid-template-rows:auto;
+
+
+}
+.pie-pagina .grupo-1 .box h2{
+    margin: 25px 0px;
+    font-size: 15px;
+
+
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin: 35px 0px;
+}
+.pie-pagina .grupo-1 .box li{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-2{
+    padding: 40px 10px;
     text-align: center;
+
+    color: #ffff;
+
 }
 
-.footer__content > * {
-    padding: .5rem;
-    color: var(--white);
-}
 
-.footer__info{
-    padding: .5rem;
-}
-
-.footer__social ul li{
-    font-size: 1.5rem;
-}
-
-.footer__social ul li a{
-    color: var(--white);
-}
-
-.footer__social ul li a:hover{
-    color: var(--golden);
-}
-
-.footer__menu ul li a{
-    color: var(--white);
-}
-
-.footer__menu ul li a:hover{
-    color: var(--golden);
-}
-
-.footer__copyright{
-    padding: .5rem;
-    text-align: center;
-    color: var(--gray);
-}
 /*fin pie*/
 
 /*logo whatsapp*/
@@ -698,8 +695,7 @@ p, li{
         /*fin contacto*/
 
         /*inicio footer*/
-        .footer__content{
-            display: grid;
+        .pie-pagina .grupo-1{
             grid-template-columns: repeat(3, 1fr);
         }
         /*fin footer*/
