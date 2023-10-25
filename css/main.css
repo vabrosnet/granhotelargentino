@@ -404,14 +404,14 @@ p, li{
     background-color: #dad5a576;
 }
 
+/*fin HABITACIONES*/
 
 
-
-/* Restaurante */
+/* RESTAURANTE */
 
 .Restaurante {
     background-image: url(../img/Hotel/Emperador-Hotel-Buenos-Aires-Exterior.jpg);
-    height: 25%;
+    height: 100vh;
     width: 100%;
     
     background-repeat: no-repeat;
@@ -437,7 +437,7 @@ p, li{
 
 
 
-/*fin HABITACIONES*/
+/*fin RESTAURANTE*/
 
 
 /*SERVICIOS*/
