@@ -907,7 +907,7 @@ p, li{
 
     }
 
-    #Habitaciones {
+    #habitaciones {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
