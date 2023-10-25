@@ -860,3 +860,95 @@ p, li{
         /*fin footer*/
     }
 /* fin desktop */
+
+/* ----------------------MEDIA QUERIES---------------------*/
+
+
+@media screen and (max-width: 768px) {
+    #Nosotros {
+        flex-wrap: wrap;
+
+    }
+
+    #Nosotros img {
+        width: 70%;
+        height: 500px;
+        margin-left: 15%;
+    }
+
+    #Nosotros h2 {
+
+        font-size: 270%;
+        margin-top: 40px;
+
+    }
+
+    #Nosotros p {
+        width: 80%;
+        text-align: justify;
+        margin-left: 10%;
+        margin-top: 5%;
+        font-size: 100%;
+    }
+
+    .Restaurante {
+        height: 18%;
+        margin-top: 25%;
+    }
+
+    .Restaurante h2 {
+        font-size: 250%;
+
+    }
+
+    .Restaurante h5 {
+        margin: 15%;
+        font-size: 150%;
+
+    }
+
+    #Habitaciones {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 18px;
+
+
+    }
+
+    .Deluxe {
+        display: flex;
+        /* border: solid black;*/
+        width: 10%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: end;
+        height: 100%;
+        width: 100%;
+        margin: 10%;
+    }
+
+    .Deluxe img {
+        height: 190px;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .Iconos {
+
+        gap: 1rem;
+        display: flex;
+        margin-left: 100px;
+        justify-content: space-between;
+        align-content: center;
+
+    }
+    .Iconos img{
+        height: 80px;
+        width: 65%;
+        
+       
+    }
+
+  
+    }
