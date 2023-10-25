@@ -457,27 +457,33 @@ p {
     align-content: center;
     margin-left: 10%;
     grid-template-columns: repeat(3, 1fr);
-    width: 70%;
-    height: 80%;
+    width: 80%;
+    height: 90%;
     gap: 2rem;
+   
 
 }
 
 .Iconos img {
-    width: 35%;
-    height: 20%;
-    margin: 20%;
+    border: solid black;
+    border-radius: 50%;
+    width: 55%;
+    height: 45%;
+    
 
 }
 
 .Iconos p {
-    font-size: 75%;
+    font-size: 95%;
+   
 }
 
 .Box-Icon {
-    border: solid black;
+    /*border: solid black;*/
     text-align: center;
     place-items: center;
+    border-radius: 50%;
+
 
 
 
@@ -574,8 +580,6 @@ p {
         margin-top: 18px;
 
 
-
-
     }
 
     .Deluxe {
@@ -600,25 +604,17 @@ p {
 
         gap: 1rem;
         display: flex;
-        margin-left: 120px;
+        margin-left: 100px;
         justify-content: space-between;
         align-content: center;
 
     }
-
-    .Box-Icon {
-        margin: 3px;
-        width: 95px;
+    .Iconos img{
+        height: 80px;
+        width: 65%;
+        
+       
     }
 
-    .Box-Icon img {
-        width: 25%;
-
-
+  
     }
-
-}
-
-
-
-@media screen and(min-width: 768px) {}
