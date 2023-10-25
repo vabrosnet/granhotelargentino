@@ -37,7 +37,7 @@ body{
     flex-grow: 1;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family:var(--titles);
     text-transform: uppercase;
     color: var(--golden);
@@ -68,7 +68,6 @@ p, li{
 .mobile-menu, .desktop-menu{
     display: none;
 }
-
 /* fin generales */
 
 /* encabezado */
@@ -154,7 +153,9 @@ p, li{
     .mobile-menu__nav{
         flex-grow: 1;
         display: flex;
-        align-items: center; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .mobile-menu__nav ul{
@@ -268,7 +269,6 @@ p, li{
     }
 
     /*fin slider*/
-
 /* fin principal */
 
 
@@ -285,8 +285,8 @@ p, li{
     grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
     gap: 2rem;
-    
 }
+
 .servicios__card {
     padding: 2rem;
     display: flex;
@@ -326,6 +326,9 @@ p, li{
 
 /*habitaciones*/
 
+
+
+
 /*fin habitaciones*/
 
 
@@ -335,16 +338,9 @@ p, li{
     position: relative;
     background-color: var(--black);
     background: linear-gradient(70deg, #000, #343434);
-    padding: 0rem 1rem;
+    padding: 0rem 0rem;
     width: 98.9vw;
     height: 100vh;
-}
-
-.comentarios__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 500vw;  
 }
 
 .comentarios__titulo{
@@ -355,6 +351,13 @@ p, li{
     width: auto;
     margin-bottom: 2rem;
     overflow: hidden;
+}
+
+.comentarios__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500vw;  
 }
   
 .comentarios__card{
@@ -390,15 +393,38 @@ p, li{
     transition: all 300ms;
     text-align: center;
 }
+
+.comentarios__mapa{
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+    width: 100%;
+    
+}
+
+.comentarios__mapa iframe{
+    position: absolute;
+    padding-top: 2rem;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+}
+
+.comentarios__mapa iframe:hover
+{
+    filter: grayscale(0);
+}
+
 /*fin comentarios*/
 
 /*contacto*/
 
 .contacto{
-    background: var(--black);
-    color: var(--dark-gray);
+    background: var(--white);
+    color: var(--black);
     line-height: 1.6;
-    padding: 0 1.8rem;
+    padding: 1rem 0.5rem;
 }
 
 .contacto__titulo{
@@ -408,7 +434,7 @@ p, li{
 }
 
 .contacto__content {
-    box-shadow: 0 0 40px 0 rgba(255, 255, 255, .3);
+    box-shadow: 0 0 40px 0 rgba(20, 19, 19, 0.3);
 }
 
 .contacto__content > * {
@@ -453,7 +479,7 @@ p, li{
     background: var(--golden);
     border: 0;
     text-transform: uppercase;
-    padding: 1em;
+    padding: .7rem;
 }
 
 .contacto__form form .btn:hover,
@@ -465,7 +491,11 @@ p, li{
 }
 
 .contacto__info {
-    background: #000;
+    background: var(--golden);
+}
+
+.contacto__info h3 {
+    color: var(--black);
 }
 
 .contacto__info h4, .contacto__info ul, .contacto__info p {
@@ -475,8 +505,56 @@ p, li{
 /*fin contacto*/
 
 /*pie*/
-footer{
-    background-color: #2F2F2F;
+.footer{
+    background-color: var(--black);
+    background: linear-gradient(70deg, #000, #343434);
+    /* padding: 2rem 1rem;  */
+    line-height: 1.6;
+    
+}
+
+.footer__content{
+    /* height: 50%; */
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    justify-content: baseline;
+    text-align: center;
+}
+
+.footer__content > * {
+    padding: .5rem;
+    color: var(--white);
+}
+
+.footer__info{
+    padding: .5rem;
+}
+
+.footer__social ul li{
+    font-size: 1.5rem;
+}
+
+.footer__social ul li a{
+    color: var(--white);
+}
+
+.footer__social ul li a:hover{
+    color: var(--golden);
+}
+
+.footer__menu ul li a{
+    color: var(--white);
+}
+
+.footer__menu ul li a:hover{
+    color: var(--golden);
+}
+
+.footer__copyright{
+    padding: .5rem;
+    text-align: center;
+    color: var(--gray);
 }
 /*fin pie*/
 
@@ -486,8 +564,8 @@ footer{
     width: 3.5rem;
     height: 3.5rem;
     line-height: 3.5rem;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1rem;
+    right: 1rem;
     background-color: var(--whatsapp);
     color: var(--white);
     border-radius: 3.5rem;
@@ -506,7 +584,6 @@ footer{
     stroke: var(--whatsapp);
     
 }
-
 /*fin whatsapp*/
 
 
@@ -590,17 +667,24 @@ footer{
         /*fin comentarios*/
 
         /*inicio contacto*/
+        .contacto{
+            padding: 1rem 3rem;
+        }
         .contacto__content {
             display: grid;
             grid-template-columns: 2fr 1fr;
         }
         .contacto__content > * {
-            padding: 2em;
+            padding: 1.5rem;
         }
         .contacto__info h4,
         .contacto__info ul,
         .contacto__info p {
             text-align: left;
+        }
+
+        .contacto__info li{
+            margin-bottom: 1rem;
         }
 
         .contacto__form form {
@@ -612,5 +696,12 @@ footer{
             grid-column: 1 / 3;
         }
         /*fin contacto*/
+
+        /*inicio footer*/
+        .footer__content{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        /*fin footer*/
     }
 /* fin desktop */
