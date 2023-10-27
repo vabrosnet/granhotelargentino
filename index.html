@@ -69,7 +69,7 @@
             <div class="Texto">
                 <h2>Nosotros</h2>
                 <br>
-                <p>Gran Hotel Buenos Argentino tiene como objetivo conseguir que tu visita sea lo más relajante y
+                <p>Gran Hotel Argentino tiene como objetivo conseguir que tu visita sea lo más relajante y
                     agradable posible, razón por la que tantos huéspedes siguen volviendo año tras año.
                     <br>En GHA te sentirás como en tu propia casa además de las 87 habitaciones con decoraciones
                     diferentes contamos con áreas comunes de descanso y áreas de trabajo.
@@ -214,22 +214,25 @@
             <h3 class="contacto__titulo">Contacto</h3>
             <div class="contacto__content">
                 <div class="contacto__form">
-                    <form action="registro.php" method="post" onsubmit="return validarFormulario();">
+                    <form id="form" >
                         <p class="block">
-                            <label for="nombre">Apellido y Nombre:</label>
+                            <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre" name="nombre" required>
                         </p>
                         <p>
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" >
                         </p>
                         <p>
                             <label for="telefono">Teléfono:</label>
-                            <input type="tel" id="telefono" name="telefono" required>
+                            <input type="tel" id="telefono" name="telefono" >
                         </p>
                         <p class="block">
                             <label for="mensaje">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="4" ></textarea>
+                        </p>
+                        <p class="contacto__respuesta block" id="respuesta">
+                            <!-- ALERTA DE MENSAJES -->
                         </p>
                         <p class="block">
                             <input class="btn" type="submit" value="Enviar">
@@ -251,73 +254,37 @@
 
     </main>
 
-    <footer class="pie-pagina">
-        <!-- Footer</-->
-        <div class="grupo-1">
-
-            <div class="box">
-                <div>
-                    <h2>GRAN HOTEL ARGENTINO</h2>
-                </div>
-                <div class="items-footer">
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__info">
+                <h4>Reservas</h4>
+                <p><i class="bi bi-calendar3"></i> Realice su reserva.</p>
+            </div>
+            
+            <div class="footer__social">
+                <h4>REDES SOCIALES</h4>
+                <div class="iconos">
                     <ul>
-                        <li>Inicio</li>
-                        <li>Habitaciones</li>
-                        <li>Servicios</li>
-                        <li>Contacto</li>
+                        <li><a target="_blank" href="https://instagram.com"><i class="bi bi-instagram"></i></a></li> 
+                        <li><a target="_blank" href="https://facebook.com"><i class="bi bi-facebook"></i></a></li>
+                        <li><a target="_blank" href="https://youtube.com"><i class="bi bi-youtube"></i></a></li>
+                        <li><a target="_blank" href="https://twitter.com"><i class="bi bi-twitter"></i></a></li>
                     </ul>
-
-                </div>>
+                </div>
             </div>
 
-
-            <div class="box">
-                <div>
-                    <h2>CONTACTOS</h2>
-                </div>
-                <div>
-                    <div>
-                        <p>REDES SOCIALES</p>
-                        <ul>
-                            <li>Instagram</li>
-                            <li>Facebook</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>LLAMANOS</p>
-                        <ul>
-                            <li>Tel: (011) 4556677</li>
-                            <li>whatsapp: 011 4882255 </li>
-                        </ul>
-                    </div>
-                </div>>
-            </div>
-
-            <div class="box">
-                <div>
-                    <h2>ENCUENTRANOS</h2>
-                </div>
-                <div>
-                    <div>
-                        <p>UBICACION</p>
-                        <ul>
-                            <li>Hipolito Yrigoyen 1683 (B7600CUX)</li>
-                            <li>Ciudad Autonoma de Buenos Aires</li>
-                            <li>Argentina</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>RESERVAS</p>
-                        <ul>
-                            <li>Contacto para Reservas</li>
-                        </ul>
-                    </div>
-                </div>>
+            <div class="footer__menu">
+                <h4>Gran Hotel Argentino</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#habitaciones">Habitaciones</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
             </div>
         </div>
-
-        <div class="grupo-2">
-            <small>Gran Hotel Argentino ©2023 - Todos los derechos reservados.</small>
+        <div class="footer__copyright">
+            <p>Gran Hotel Argentino © 2023 - Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -333,9 +300,9 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/main.js"></script>
     <script src="js/getapi.js"></script>
     <script src="js/gsap.js"></script>
-    <script type="module" src=""></script>
 </body>
 </html>

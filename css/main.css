@@ -8,6 +8,7 @@
     --gray: hsl(0, 0%, 55%);
     --dark-gray: hsl(0, 0%, 41%);
     --golden: #bb975d;
+    --red: #e80707;
     --whatsapp: #0df053;
 
     /* Tipografías */
@@ -75,13 +76,13 @@ p, li{
     position: fixed;
     display: flex;
     height: 4.5rem;
+    width: 100vw;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: var(--golden);
     /* opacity: 0.9; */
     padding: 2rem 1rem;
-    width: 100%;
     z-index: 99;
 }
 
@@ -272,29 +273,21 @@ p, li{
 /* fin principal */
 
 /*NOSOTROS*/
-
-
 #Nosotros {
-
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    /*justify-content: space-between;*/
     align-items: center;
-
-
 }
 
 #Nosotros img {
     width: 50%;
     margin-top: 4%;
+    margin-left: 5%;
     height: 650px;
     border-radius: 03%;
     box-shadow: 20px 10px 10px rgb(27, 27, 25, 7.5);
-
-
 }
-
 
 #Nosotros h2 {
     position: relative;
@@ -306,7 +299,6 @@ p, li{
 
 }
 
-
 #Nosotros p {
     width: 80%;
     text-align: center;
@@ -314,10 +306,7 @@ p, li{
     padding: 10px;
     align-self: flex-start;
     font-size: 150%;
-    box-shadow: 20px 10px 10px rgb(27, 27, 25, 7.5);
-
 }
-
 /*FIN NOSOTROS*/
 
 /*HABITACIONES*/
@@ -329,8 +318,7 @@ p, li{
     display: grid;
     grid-template-columns: 45% 50%;
     column-gap: 0.5rem;
-    margin-top: 8%;
-
+    margin-bottom: 8%;
 }
 
 .Deluxe {
@@ -397,11 +385,11 @@ p, li{
 
 }
 
-.Box-Icon:hover {
+.Box-Icon img:hover {
     cursor: pointer;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transition: 0.30s;
-    background-color: #dad5a576;
+    background-color: var(--golden);
 }
 
 /*fin HABITACIONES*/
@@ -413,7 +401,7 @@ p, li{
     background-image: url(../img/Hotel/Emperador-Hotel-Buenos-Aires-Exterior.jpg);
     height: 100vh;
     width: 100%;
-    
+    margin-bottom: 5%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -423,7 +411,7 @@ p, li{
 }
 
 .Restaurante h2 {
-    font-size: 400%;
+    font-size: 350%;
     text-align: center;
     margin: 20%;
     color: rgb(255, 255, 255);
@@ -516,7 +504,7 @@ p, li{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 500vw;  
+    width: 300vw;  
 }
   
 .comentarios__card{
@@ -536,12 +524,8 @@ p, li{
     padding-top: 1rem;    
 }
 
-.comentarios__card i{
-    font-size: 1.5rem;  
-}
-
 .comentarios__card h3{
-    font-size: 1rem;  
+    font-size: 1rem; 
 }
 
 .comentarios__card .description{
@@ -553,27 +537,32 @@ p, li{
     text-align: center;
 }
 
+.comentarios__card i{
+    font-size: 1.5rem;  
+}
+
 .comentarios__mapa{
-    position: relative;
+    position: absolute;
     overflow: hidden;
     height: 50vh;
     width: 100%;
-    
+    bottom: 0;
 }
 
 .comentarios__mapa iframe{
-    position: absolute;
-    padding-top: 2rem;
-    bottom: 0;
+    /* position: absolute; */
+    padding-top: 3rem;
+    /* padding-bottom: 0;
+    bottom: 0; */
     width: 100%;
     height: 100%;
     filter: grayscale(1);
 }
 
-.comentarios__mapa iframe:hover
+/* .comentarios__mapa iframe:hover
 {
     filter: grayscale(0);
-}
+} */
 
 /*fin comentarios*/
 
@@ -661,58 +650,79 @@ p, li{
     text-align: center;
     margin: 0 0 1rem 0;
 }
+
+.contacto__respuesta{
+    text-align: center;
+    color: var(--red);
+    /* padding-top: 10px; */
+}
+
+.sucess{
+    color: var(--golden);
+}
 /*fin contacto*/
 
 /*pie*/
-.pie-pagina{
-    width: 100%;
-    background-color: #2F2F2F;
-    padding: 35px 35px 0px opx;
-    padding-left: 50px;
+.footer{
+    background-color: var(--black);
+    background: linear-gradient(70deg, #000, #343434);
+    /* padding: 2rem 1rem;  */
+    line-height: 1.6;
+    
 }
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width:1200px;
-    margin: auto;
+
+.footer__content{
+    /* height: 50%; */
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    margin: 0px 10px;
-
-}
-.pie-pagina .grupo-1 .box{
-    width: 100%;
-    /* height: 100%; */
-    display: flex;
-    display: grid;
-    grid-template-rows:auto;
-
-
-}
-.pie-pagina .grupo-1 .box h2{
-    margin: 25px 0px;
-    font-size: 15px;
-
-
-}
-.pie-pagina .grupo-1 .box p{
-    color: #efefef;
-    margin: 35px 0px;
-}
-.pie-pagina .grupo-1 .box li{
-    color: #efefef;
-    margin-bottom: 10px;
-}
-
-.pie-pagina .grupo-2{
-    padding: 40px 10px;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    justify-content: baseline;
     text-align: center;
-
-    color: #ffff;
-
 }
 
+.footer__content > * {
+    padding: 1.5rem;
+    color: var(--white);
+}
 
+.footer__info{
+    padding: .5rem;
+}
+
+.footer__social .iconos ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer__social ul li{
+    font-size: 1.5rem;
+}
+
+.footer__social ul li a{
+    color: var(--white);
+}
+
+.footer__social ul li a:hover{
+    color: var(--golden);
+}
+
+.footer__menu ul li a{
+    color: var(--white);
+}
+
+.footer__menu ul li a:hover{
+    color: var(--golden);
+}
+
+.footer__copyright{
+    padding: .5rem;
+    text-align: center;
+    color: var(--gray);
+}
 /*fin pie*/
+
 
 /*logo whatsapp*/
 .btn-wsp{
@@ -814,7 +824,7 @@ p, li{
     
         /*inicio comentarios*/
         .comentarios__content {
-            width: 200vw;  
+            width: 150vw;  
         }
 
         .comentarios__card{
@@ -854,7 +864,8 @@ p, li{
         /*fin contacto*/
 
         /*inicio footer*/
-        .pie-pagina .grupo-1{
+        .footer__content{
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
         }
         /*fin footer*/
@@ -862,25 +873,21 @@ p, li{
 /* fin desktop */
 
 /* ----------------------MEDIA QUERIES---------------------*/
-
-
 @media screen and (max-width: 768px) {
     #Nosotros {
         flex-wrap: wrap;
-
+        align-content: center;
     }
 
     #Nosotros img {
         width: 70%;
-        height: 500px;
-        margin-left: 15%;
+        height: 400px;
+        margin-left: 10%;
     }
 
     #Nosotros h2 {
-
         font-size: 270%;
         margin-top: 40px;
-
     }
 
     #Nosotros p {
@@ -892,19 +899,17 @@ p, li{
     }
 
     .Restaurante {
-        height: 18%;
-        margin-top: 25%;
+        height: 7%;
+        margin-top: 15%;
     }
 
     .Restaurante h2 {
         font-size: 250%;
-
     }
 
     .Restaurante h5 {
-        margin: 15%;
+        margin: 10%;
         font-size: 150%;
-
     }
 
     #habitaciones {
@@ -912,20 +917,19 @@ p, li{
         flex-direction: column;
         flex-wrap: wrap;
         margin-top: 18px;
-
-
+        margin-bottom: 5px;
     }
 
     .Deluxe {
         display: flex;
-        /* border: solid black;*/
         width: 10%;
         flex-direction: row;
         flex-wrap: wrap;
         align-content: end;
+        justify-content: center;
         height: 100%;
         width: 100%;
-        margin: 10%;
+        margin-top: 10%;
     }
 
     .Deluxe img {
@@ -935,20 +939,16 @@ p, li{
     }
 
     .Iconos {
-
         gap: 1rem;
-        display: flex;
-        margin-left: 100px;
-        justify-content: space-between;
-        align-content: center;
-
+        display: grid;
+        margin-left: 40px;
+        grid-template-columns: 1fr;
     }
+
     .Iconos img{
-        height: 80px;
-        width: 65%;
-        
-       
+        height: 45px;
+        width: 45px;
+        margin-left: 5px;
     }
-
   
     }
