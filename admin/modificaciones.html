@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initialscale=1.0">
+<title>Modificar Reserva</title>
+<link rel="stylesheet" href="static/css/estilos.css">
+</head>
+<body>
+<h1>Gran Hotel Argentino - 2023</h1>
+<h3>Modificar Reserva</h3>
+<div id="app">
+    <form @submit.prevent="obtenerReserva">
+        <label for="codigo">Código:</label>
+        <input type="text" v-model="codigo" required><br>
+        <button type="submit">Buscar Reserva</button>
+        <a href="index.html">Menu principal</a>
+    </form>
+    <div v-if="mostrarDatosReserva">
+        <h2>Datos de la Reserva</h2>
+        <form @submit.prevent="guardarCambios">
+            <label for="fecha_llegadaModificar">Fecha de llegada:</label>
+            <input type="date" id="fecha_llegadaModificar" v-model="fecha_llegada" required><br>
+            <label for="fecha_salidaModificar">Fecha de salida:</label>
+            <input type="date" id="fecha_salidaModificar" v-model="fecha_salida" required><br>
+            <label for="habitacionModificar">Habitacion:</label>
+            <select id="habitacionModificar" v-model="habitacion">
+                <option value="none">Seleccione</option>
+                <option value="Simple">Simple</option>
+                <option value="Doble">Doble</option>
+                <option value="Familiar">Familiar</option>
+            </select><br>
+            <label for="apellidoModificar">Apellido:</label>
+            <input type="text" id="apellidoModificar" v-model="apellido" required><br>
+            <label for="nombreModificar">Nombre:</label>
+            <input type="text" id="nombreModificar" v-model="nombre" required><br>
+            <label for="dniModificar">Dni:</label>
+            <input type="number" id="dniModificar" v-model="dni" required><br>
+            <label for="telefonoModificar">Teléfono:</label>
+            <input type="tel" id="telefonoModificar" v-model="telefono" required><br>
+            <label for="emailModificar">Email:</label>
+            <input type="email" id="emailModificar" v-model="email" required><br>
+            <button type="submit">Guardar Cambios</button>
+            <a href="modificaciones.html">Cancelar</a>
+        </form>
+    </div>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="static/js/modificaciones.js"></script>
+</body>
+</html>

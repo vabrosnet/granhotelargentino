@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initialscale=1.0">
+<title>Listado de Reservas</title>
+<link rel="stylesheet" href="static/css/estilos.css">
+</head>
+<body>
+    <h1>Gran Hotel Argentino - 2023</h1>
+    <h3>Baja de Reservas</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Fecha de llegada</th>
+                <th>Fecha de salida</th>
+                <th>Habitacion</th>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Dni</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="reserva in reservas">
+                <td>{{ reserva.codigo }}</td>
+                <td>{{ formatearFecha(reserva.fecha_llegada) }}</td>
+                <td>{{ formatearFecha(reserva.fecha_salida) }}</td>
+                <td>{{ reserva.habitacion }}</td>
+                <td>{{ reserva.apellido }}</td>
+                <td>{{ reserva.nombre }}</td>
+                <td>{{ reserva.dni }}</td>
+                <td>{{ reserva.telefono }}</td>
+                <td>{{ reserva.email }}</td>
+                <td><button
+                @click="eliminarReserva(reserva.codigo)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="contenedor-centrado">
+        <a href="index.html">Menu principal</a>
+    </div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="static/js/listadoEliminar.js"></script>
+</body>
+</html>
