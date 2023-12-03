@@ -20,7 +20,7 @@ fetch(URL + 'reservas', {
     }
 })
 .then(function (data) {
-    alert('Producto agregado correctamente.');
+    alert('Reserva agregado correctamente.');
     // Limpiar el formulario para el proximo producto
     document.getElementById('fecha_llegada').value = "";
     document.getElementById('fecha_salida').value = "";
