@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:5000/"
+const URL = "https://vabros.pythonanywhere.com/"
 
 document.getElementById('formulario').addEventListener('submit', function (event) {event.preventDefault();
 var formData = new FormData();
