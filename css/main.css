@@ -27,6 +27,10 @@
 /* fin reset */
 
 /* generales */
+html {
+    scroll-behavior: smooth;
+}
+
 html,body{
     height: 100%;
     width: 100%;
@@ -295,7 +299,7 @@ p, li{
     margin-top: 70px;
     text-align: center;
     align-self: flex-start;
-    color: rgb(47, 50, 9);
+    color: var(--golden);
 
 }
 
@@ -421,6 +425,7 @@ p, li{
     color: aliceblue;
     font-size: 250%;
     text-align: center;
+    font-family:var(--titles);
 }
 
 
