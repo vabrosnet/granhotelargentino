@@ -20,8 +20,8 @@ const app = Vue.createApp({
                 });
         },
         formatearFecha(fecha) {
-            const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
-            const fechaFormateada = new Date(fecha).toLocaleDateString(undefined, opciones);
+            let fechaIngresada = new Date(fecha)
+            let fechaFormateada = fechaIngresada.toISOString().split('T')[0].split('-').reverse().join('-');
             return fechaFormateada;
         },
         eliminarReserva(codigo) {

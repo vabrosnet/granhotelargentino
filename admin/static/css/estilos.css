@@ -92,3 +92,9 @@ cursor: pointer;
 text-decoration: none;
 font-size: 85%;
 }
+
+.reserva__respuesta{
+    text-align: center;
+    color: red;
+    background-color: white;
+}
