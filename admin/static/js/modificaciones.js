@@ -46,6 +46,39 @@ const app = Vue.createApp({
                 .catch(error => console.error('Error:', error));
         },
 
+        verificarCambios() {
+            let respuesta = document.getElementById("respuesta");
+            let alertas = "";
+            let mailFormat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            let validado = true;
+
+            respuesta.innerHTML = "";
+
+            if (this.fecha_llegada > this.fecha_salida) {
+                alertas += `Fecha: La fecha de llegada no puede ser mayor a la fecha de salida.<br>`;
+                validado = false;
+            }
+                
+            if(this.habitacion == "none"){
+                alertas += `Habitación: debe elegir una opción de habitación.<br>`;
+                validado = false;
+            }
+        
+            if(!mailFormat.test(this.email)){
+                alertas += `Email: formato inválido.<br>`;
+                validado = false;
+            }
+
+            respuesta.innerHTML = alertas;
+            setTimeout(() => {
+                respuesta.innerHTML = "";
+                }, "3000");
+
+            if (validado) {
+                this.guardarCambios();
+            }
+        },
+
         guardarCambios() {
             const formData = new FormData();
             // formData.append('codigo', this.codigo);
