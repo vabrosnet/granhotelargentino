@@ -11,7 +11,6 @@ let form_telefono = document.getElementById("telefono");
 let form_email = document.getElementById("email");
 let respuesta = document.getElementById("respuesta");
 
-
 //FILTRAR FECHAS
 let date = new Date()
 let day = date.getDate()
@@ -37,27 +36,17 @@ document.getElementById('formulario').addEventListener('submit', function (event
     }
 
 
-    if(form_habitacion.value == "none"){
+    if(form_habitacion.value == "none") {
         alertas += `Habitación: debe elegir una opción.<br>`;
         validado = false;
     }
 
-    if(form_dni.value < 8){
-        alertas += `Teléfono: mínimo 7 caracteres.<br>`;
-        validado = false;
-    }
-
-    if(form_telefono.value < 11){
-        alertas += `Teléfono: mínimo 10 caracteres.<br>`;
-        validado = false;
-    }
-
-    if(!mailFormat.test(form_email.value)){
+    if(!mailFormat.test(form_email.value)) {
         alertas += `Email: formato inválido.<br>`;
         validado = false;
     }
 
-    if(!validado){
+    if(!validado) {
         respuesta.innerHTML = alertas;
 
         setTimeout(() => {

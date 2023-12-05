@@ -19,7 +19,7 @@
     </form>
     <div v-if="mostrarDatosReserva">
         <h2>Datos de la Reserva</h2>
-        <form @submit.prevent="guardarCambios">
+        <form @submit.prevent="verificarCambios">
             <label for="fecha_llegadaModificar">Fecha de llegada:</label>
             <input type="date" id="fecha_llegadaModificar" v-model="fecha_llegada" required><br>
             <label for="fecha_salidaModificar">Fecha de salida:</label>
@@ -36,11 +36,14 @@
             <label for="nombreModificar">Nombre:</label>
             <input type="text" id="nombreModificar" v-model="nombre" required><br>
             <label for="dniModificar">Dni:</label>
-            <input type="number" id="dniModificar" v-model="dni" required><br>
+            <input type="number" id="dniModificar" v-model="dni" maxlength="8" required><br>
             <label for="telefonoModificar">Teléfono:</label>
             <input type="tel" id="telefonoModificar" v-model="telefono" required><br>
             <label for="emailModificar">Email:</label>
             <input type="email" id="emailModificar" v-model="email" required><br>
+            <p class="reserva__respuesta" id="respuesta">
+                <!-- ALERTA DE MENSAJES -->
+            </p>
             <button type="submit">Guardar Cambios</button>
             <a href="modificaciones.html">Cancelar</a>
         </form>
