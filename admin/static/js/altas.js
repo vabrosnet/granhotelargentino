@@ -72,7 +72,7 @@ document.getElementById('formulario').addEventListener('submit', function (event
                 }
             })
             .then(function (data) {
-                alert('Reserva agregado correctamente.');
+                alert('Reserva agregada correctamente.');
                 // Limpiar el formulario para el proximo producto
                 document.getElementById('fecha_llegada').value = "";
                 document.getElementById('fecha_salida').value = "";
@@ -83,10 +83,10 @@ document.getElementById('formulario').addEventListener('submit', function (event
                 document.getElementById('telefono').value = "";
                 document.getElementById('email').value = "";
             })
-                .catch(function (error) {
-                // Mostramos el error, y no limpiamos el form.
-                alert('Error al agregar el reserva.');
-                });
+            .catch(function (error) {
+            // Mostramos el error, y no limpiamos el form.
+            alert('Error al agregar el reserva.');
+            });
     }
 
    

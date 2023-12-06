@@ -15,7 +15,6 @@ const app = Vue.createApp({
                     this.reservas = data;
                 })
                 .catch(error => {
-                    console.log('Error:', error);
                     alert('Error al obtener las reservas.');
                 });
         },

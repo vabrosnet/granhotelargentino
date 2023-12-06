@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/main.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--Iconos de bootstrap -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/reserva.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="header__logo">
+                <a href="index.html" class="link-logo">
+                    <img class="logo" src="img/logo.png" alt="Logo">
+                </a>
+                <h2>Gran Hotel Argentino</h2>
+            </div>
+            <button class="open-menu" id="open-menu"><i class="bi bi-list"></i></button>
+            <div class="mobile-menu disabled" id="mobile-menu">
+                <div class="mobile-menu__header">
+                    <div class="mobile-menu__logo">
+                        <img class="mobile-logo" src="img/logo.png" alt="Logo">
+                        <h2>Gran Hotel Argentino</h2>
+                    </div>
+                    <button class="close-menu" id="close-menu"><i class="bi bi-x"></i></button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul>
+                        <li><a class="nav_link" href="index.html">Inicio</a></li>
+                        <li><a class="nav_link" href="index.html#habitaciones">Habitaciones</a></li>
+                        <li><a class="nav_link" href="index.html#servicios">Servicios</a></li>
+                        <li><a class="nav_link" href="index.html#contacto">Contacto</a></li>
+                        <li><a class="nav_link" href="reservar.html">Reservar</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="desktop-menu">
+                <nav class="desktop-menu__nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#habitaciones">Habitaciones</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="reservar.html">Reservar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="Reserva">
+
+            <h1>Realiza tu Reserva</h1>
+            <h3>Vivi la Experiencia</h3>
+            <form id="formulario" enctype="multipart/form-data">
+               <br>
+                <div class="container__Button">
+                    <span id="inicio" class="container__Inicio">
+                        <button id="btn-abrir-modal">Ingrese su Fecha de Llegada</button>
+                        <input type="date" id="fecha_llegada" readonly>
+                        <dialog id="modal">
+                            <form method="dialog">
+                                <label for="fecha_inicio">Fecha de Llegada:</label>
+                                <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+                                <button id="btn-cerrar-modal" type="button">Cerrar</button>
+                            </form>
+                        </dialog>
+                        <article>
+                            <h3 id="welcome-message"></h3>
+                        </article>
+                    </span>
+                    <!--HACER UN PRINT CON LA FECHA QUE INTRODUCE POR EL MODAL-->
+                    <span id="salida" class="container__Salida">
+                        <button id="btn-abrir-modal-salida">Ingrese su Fecha de Salida</button>
+                        <input type="date" id="fecha_salida" readonly>
+                        <dialog id="modal-salida">
+                            <form method="dialog">
+                                <label for="fecha_fin">Salida:</label>
+                                <input type="date" id="fecha_fin" name="fecha_fin" required>
+                                <button id="btn-cerrar-modal-salida" type="button">Cerrar</button>
+                                <!--<button id="btn-cerrar-modal-salida">Cerrar</button>-->
+                            </form>
+                        </dialog>
+                        <article>
+                            <h3 id="welcome-message2"></h3>
+                        </article>
+                    </span>
+
+                    <span class="container__Select">
+                        <button id="btn-abrir-modal-pasajeros">Pasajeros</button>
+                        <input type="text" id="habitacion" readonly>
+                        <dialog id="modal-pasajeros">
+                            <select class="form-select-habitaciones" aria-label="Default select example" id="modal-habitacion">
+                                <option value="none">Seleccione</option>
+                                <option value="Simple">Simple</option>
+                                <option value="Doble">Doble</option>
+                                <option value="Familiar">Familiar</option>
+                            </select>
+                            <button id="btn-cerrar-modal-pasajeros" type="button">Cerrar</button>
+
+                        </dialog>
+                        <article>
+                            <h3 id="welcome-message3"></h3>
+                        </article>
+                    </span>
+                </div>
+                <div class="container__titular">
+                    <span class="titular__nombre">
+                        <div class="name">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required><br>
+                        </div>
+                        <div class="lastname">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                    </span>
+                    <br>
+                    <span class="dni-tipo">
+                        <label for="dni-tipo1">Documento Tipo:</label><br><br>
+                        <input id="dni-tipo1" type="radio" name="dni-tipo1">
+                        <label for="dni-tipo1">DNI</label>
+                        <input id="dni-tipo1" type="radio" name="dni-tipo1">
+                        <label for="dni-tipo1">LE</label>
+                        <input id="dni-tipo1" type="radio" name="dni-tipo1">
+                        <label for="dni-tipo1">LC</label>
+                        <input id="dni-tipo1" type="radio" name="dni-tipo1">
+                        <label for="dni-tipo1">Pasaporte</label><br><br><br>
+                        <label for="dni-numero">Documento N°:</label>
+                        <input class="dni-numero" type="number" id="dni-numero" name="dni-numero" required><br>
+
+                    </span>
+                    <br><br>
+                    <span class="Contacto">
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="telefono" name="telefono" required><br><br><br>
+                        <label for="email">E-Mail:</label>
+                        <input type="email" id="email" name="email" required><br>
+                    </span>
+                </div><br><br><br>
+
+              
+<div class="submits">
+<button type="button">ENVIAR</button>
+<a href="index.html">MENU PRINCIPAL</a></div>
+            </form>
+        </section>
+        <br><br><br><br><br><br><br>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__info">
+                <h4>Reservas</h4>
+                <p><i class="bi bi-calendar3"></i> Realice su reserva.</p>
+            </div>
+
+            <div class="footer__social">
+                <h4>REDES SOCIALES</h4>
+                <div class="iconos">
+                    <ul>
+                        <li><a target="_blank" href="https://instagram.com"><i class="bi bi-instagram"></i></a></li>
+                        <li><a target="_blank" href="https://facebook.com"><i class="bi bi-facebook"></i></a></li>
+                        <li><a target="_blank" href="https://youtube.com"><i class="bi bi-youtube"></i></a></li>
+                        <li><a target="_blank" href="https://twitter.com"><i class="bi bi-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__menu">
+                <h4>Gran Hotel Argentino</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#habitaciones">Habitaciones</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="reservar.html">Reservar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>Gran Hotel Argentino © 2023 - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/reservar.js"></script>
+</body>
+
+</html>
