@@ -30,6 +30,5 @@ fetch(URL + 'reservas')
     }
 })
 .catch(function (error) {
-// Código para manejar errores
-alert('Error al obtener las reservas.');
+    alert('Error al obtener las reservas.');
 });
