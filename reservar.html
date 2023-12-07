@@ -6,10 +6,10 @@
     <title>Reserva</title>
     <link rel="shortcut icon" href="img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='css/normalize.css'>
     <link rel="stylesheet" href='css/main.css'>
+    <link rel='stylesheet' href='css/reserva.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!--Iconos de bootstrap -->
-    <link rel='stylesheet' type='text/css' media='screen' href='css/reserva.css'>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
 </head>
 <body>
@@ -53,58 +53,57 @@
             </div>
         </header>
         <section class="Reserva">
-
             <h1>Realiza tu Reserva</h1>
             <h3>Vivi la Experiencia</h3>
             <form id="formulario" enctype="multipart/form-data">
-               <br>
                 <div class="container__Button">
                     <span id="inicio" class="container__Inicio">
                         <button id="btn-abrir-modal">Ingrese su Fecha de Llegada</button>
-                        <input type="date" id="fecha_llegada" readonly>
+                        <input type="date" id="fecha_llegada" readonly required>
                         <dialog id="modal">
-                            <form method="dialog">
+                            <div method="dialog">
                                 <label for="fecha_inicio">Fecha de Llegada:</label>
                                 <input type="date" id="fecha_inicio" name="fecha_inicio" required>
                                 <button id="btn-cerrar-modal" type="button">Cerrar</button>
-                            </form>
+                            </div>
                         </dialog>
                         <article>
-                            <h3 id="welcome-message"></h3>
+                            <h3 id="message1"></h3>
                         </article>
                     </span>
                     <!--HACER UN PRINT CON LA FECHA QUE INTRODUCE POR EL MODAL-->
                     <span id="salida" class="container__Salida">
                         <button id="btn-abrir-modal-salida">Ingrese su Fecha de Salida</button>
-                        <input type="date" id="fecha_salida" readonly>
+                        <input type="date" id="fecha_salida" readonly required>
                         <dialog id="modal-salida">
-                            <form method="dialog">
-                                <label for="fecha_fin">Salida:</label>
+                            <div method="dialog">
+                                <label for="fecha_fin">Fecha de Salida:</label>
                                 <input type="date" id="fecha_fin" name="fecha_fin" required>
                                 <button id="btn-cerrar-modal-salida" type="button">Cerrar</button>
-                                <!--<button id="btn-cerrar-modal-salida">Cerrar</button>-->
-                            </form>
+                            </div>
                         </dialog>
                         <article>
-                            <h3 id="welcome-message2"></h3>
+                            <h3 id="message2"></h3>
                         </article>
                     </span>
 
                     <span class="container__Select">
-                        <button id="btn-abrir-modal-pasajeros">Pasajeros</button>
-                        <input type="text" id="habitacion" readonly>
+                        <button id="btn-abrir-modal-pasajeros">Habitación</button>
+                        <input type="text" id="habitacion" readonly required>
                         <dialog id="modal-pasajeros">
-                            <select class="form-select-habitaciones" aria-label="Default select example" id="modal-habitacion">
-                                <option value="none">Seleccione</option>
-                                <option value="Simple">Simple</option>
-                                <option value="Doble">Doble</option>
-                                <option value="Familiar">Familiar</option>
-                            </select>
-                            <button id="btn-cerrar-modal-pasajeros" type="button">Cerrar</button>
-
+                            <div method="dialog">
+                                <label for="modal-habitacion">Habitación:</label>
+                                <select class="form-select-habitaciones" aria-label="Default select example" id="modal-habitacion" name="modal-habitacion">
+                                    <option value="none">Seleccione</option>
+                                    <option value="Simple">Simple</option>
+                                    <option value="Doble">Doble</option>
+                                    <option value="Familiar">Familiar</option>
+                                </select>
+                                <button id="btn-cerrar-modal-pasajeros" type="button">Cerrar</button>
+                            </div>
                         </dialog>
                         <article>
-                            <h3 id="welcome-message3"></h3>
+                            <h3 id="message3"></h3>
                         </article>
                     </span>
                 </div>
@@ -119,19 +118,9 @@
                             <input type="text" id="apellido" name="apellido" required>
                         </div>
                     </span>
-                    <br>
                     <span class="dni-tipo">
-                        <label for="dni-tipo1">Documento Tipo:</label><br><br>
-                        <input id="dni-tipo1" type="radio" name="dni-tipo1">
-                        <label for="dni-tipo1">DNI</label>
-                        <input id="dni-tipo1" type="radio" name="dni-tipo1">
-                        <label for="dni-tipo1">LE</label>
-                        <input id="dni-tipo1" type="radio" name="dni-tipo1">
-                        <label for="dni-tipo1">LC</label>
-                        <input id="dni-tipo1" type="radio" name="dni-tipo1">
-                        <label for="dni-tipo1">Pasaporte</label><br><br><br>
                         <label for="dni-numero">Documento N°:</label>
-                        <input class="dni-numero" type="number" id="dni-numero" name="dni-numero" required><br>
+                        <input class="dni-numero" type="number" id="dni" name="dni-numero" required><br>
 
                     </span>
                     <br><br>
@@ -141,19 +130,19 @@
                         <label for="email">E-Mail:</label>
                         <input type="email" id="email" name="email" required><br>
                     </span>
-                </div><br><br><br>
+                </div><br>
 
               
-<div class="submits">
-<button type="button">ENVIAR</button>
-<a href="index.html">MENU PRINCIPAL</a></div>
+                <div class="submits">
+                    <p class="reserva__respuesta" id="respuesta">
+                        <!-- ALERTA DE MENSAJES -->
+                    </p>
+                    <button type="submit" id="enviar">ENVIAR</button>
+                    <a href="index.html">MENU PRINCIPAL</a>
+                </div>
             </form>
         </section>
-        <br><br><br><br><br><br><br>
     </main>
-
-
-
     <footer class="footer">
         <div class="footer__content">
             <div class="footer__info">
