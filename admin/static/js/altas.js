@@ -36,7 +36,7 @@ document.getElementById('formulario').addEventListener('submit', function (event
     }
 
 
-    if(form_habitacion.value == "none") {
+    if(form_habitacion.value == "none" || form_habitacion.value == "") {
         alertas += `Habitación: debe elegir una opción.<br>`;
         validado = false;
     }
