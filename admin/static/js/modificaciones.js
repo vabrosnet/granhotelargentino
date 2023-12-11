@@ -59,7 +59,7 @@ const app = Vue.createApp({
                 validado = false;
             }
                 
-            if(this.habitacion == "none"){
+            if(this.habitacion == "none" || this.habitacion.value == ""){
                 alertas += `Habitación: debe elegir una opción de habitación.<br>`;
                 validado = false;
             }
