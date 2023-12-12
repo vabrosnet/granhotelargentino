@@ -1,6 +1,25 @@
-/* Estilos para todo el proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;400;500&display=swap');
+
+/* variables */
+:root {
+    /* Colores */
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 55%);
+    --dark-gray: hsl(0, 0%, 41%);
+    --golden: #bb975d;
+    --red: #e80707;
+    --whatsapp: #0df053;
+
+    /* Tipografías */
+    --text: 'Alata', sans-serif;
+    --titles: 'Josefin Sans', sans-serif;
+}
+/* fin variables */
+
+
 body {
-font-family: Arial, sans-serif;
+font-family: var(--text);
 background-color: #f9f9f9;
 }
 
@@ -20,7 +39,7 @@ padding: 20px;
 
 h1, h2, h3, h4, h5, h6 {
 text-align: center;
-color: #007bff;
+color: var(--black);
 }
 
 form {
@@ -70,7 +89,7 @@ background-color: #0056b3;
 button {
 padding: 8px;
 margin: 4px;
-background-color: #007bff;
+background-color: var(--red);
 color: #ffffff;
 border: none;
 border-radius: 5px;
@@ -78,13 +97,13 @@ cursor: pointer;
 }
 
 button:hover {
-background-color: #0056b3;
+background-color: var(--gray);
 }
 
 a {
 padding: 8px;
 margin: 4px;
-background-color: #fdab13;
+background-color: var(--golden);
 color: #ffffff;
 border: none;
 border-radius: 5px;
